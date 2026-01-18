@@ -1,0 +1,310 @@
+* {
+  border: none;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 15px;
+  min-height: 10px;
+}
+
+window#waybar {
+  background: transparent;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+
+#custom-archicon,
+#clock,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#idle_inhibitor,
+#pulseaudio,
+#pulseaudio_slider,
+#network,
+#language,
+#battery,
+#workspaces,
+#taskbar {
+  background-color: rgba(22, 19, 32, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+#custom-archicon,
+#clock,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#idle_inhibitor,
+#pulseaudio,
+#pulseaudio_slider,
+#network,
+#language,
+#battery {
+  color: #ffffff;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding-left: 12px;
+  padding-right: 12px;
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+
+#custom-archicon,
+#cpu,
+#idle_inhibitor {
+  margin-left: 5px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+#clock,
+#temperature,
+#language,
+#battery {
+  margin-right: 5px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+#custom-archicon {
+  font-size: 20px;
+  color: #89B4FA;
+  background: rgba(22, 19, 32, 0.9);
+  padding-right: 17px;
+  text-shadow: 0 0 10px rgba(137, 180, 250, 0.7);
+  box-shadow:
+    0 0 15px rgba(137, 180, 250, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+#clock {
+  background: linear-gradient(135deg,
+      rgba(171, 233, 179, 0.3),
+      rgba(181, 232, 224, 0.25));
+  text-shadow: 0 0 8px rgba(171, 233, 179, 0.5);
+}
+
+#cpu {
+  background: linear-gradient(135deg,
+      rgba(150, 205, 251, 0.3),
+      rgba(137, 180, 250, 0.25));
+  text-shadow: 0 0 8px rgba(150, 205, 251, 0.5);
+}
+
+#memory {
+  background: linear-gradient(135deg,
+      rgba(221, 182, 242, 0.3),
+      rgba(203, 166, 247, 0.25));
+  text-shadow: 0 0 8px rgba(221, 182, 242, 0.5);
+}
+
+#disk {
+  background: linear-gradient(135deg,
+      rgba(245, 194, 231, 0.3),
+      rgba(232, 162, 175, 0.25));
+  text-shadow: 0 0 8px rgba(245, 194, 231, 0.5);
+}
+
+#temperature {
+  background: linear-gradient(135deg,
+      rgba(248, 189, 150, 0.3),
+      rgba(250, 179, 135, 0.25));
+  text-shadow: 0 0 8px rgba(248, 189, 150, 0.5);
+}
+
+#workspaces {
+  background: rgba(22, 19, 32, 0.9);
+  border-radius: 12px;
+  margin: 6px 5px;
+  padding: 0px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+#workspaces button {
+  color: #B5E8E0;
+  background: transparent;
+  padding: 4px 6px;
+  margin: 0 2px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+#workspaces button.occupied {
+  color: #A6E3A1;
+}
+
+#workspaces button.active {
+  color: #89B4FA;
+  background: rgba(137, 180, 250, 0.2);
+  text-shadow: 0 0 12px rgba(137, 180, 250, 0.8);
+  box-shadow:
+    0 0 15px rgba(137, 180, 250, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+#workspaces button:hover {
+  color: #89B4FA;
+  background: rgba(137, 180, 250, 0.15);
+  text-shadow: 0 0 8px rgba(137, 180, 250, 0.6);
+}
+
+
+#taskbar {
+  background: rgba(22, 19, 32, 0.9);
+  border-radius: 12px;
+  padding: 0px 8px;
+  margin: 6px 5px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+#taskbar button {
+  padding: 2px 8px;
+  margin: 3px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+#taskbar button.active,
+#taskbar button:hover {
+  background: rgba(52, 69, 137, 0.4);
+  box-shadow:
+    0 0 10px rgba(137, 180, 250, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+
+#idle_inhibitor {
+  background: linear-gradient(135deg,
+      rgba(181, 232, 224, 0.3),
+      rgba(148, 226, 213, 0.25));
+  text-shadow: 0 0 8px rgba(181, 232, 224, 0.5);
+  padding-right: 15px;
+}
+
+#pulseaudio {
+  color: #ffffff;
+  background: linear-gradient(135deg,
+      rgba(245, 224, 220, 0.3),
+      rgba(242, 205, 205, 0.25));
+  text-shadow: 0 0 8px rgba(245, 224, 220, 0.5);
+}
+
+#pulseaudio_slider {
+  color: #ffffff;
+  background: linear-gradient(135deg,
+      rgba(232, 162, 175, 0.3),
+      rgba(243, 139, 168, 0.25));
+  text-shadow: 0 0 8px rgba(232, 162, 175, 0.5);
+}
+
+#network {
+  background: linear-gradient(135deg,
+      rgba(203, 166, 247, 0.3),
+      rgba(180, 190, 254, 0.25));
+  text-shadow: 0 0 8px rgba(203, 166, 247, 0.5);
+  padding-right: 13px;
+}
+
+#language {
+  background: linear-gradient(135deg,
+      rgba(166, 227, 161, 0.3),
+      rgba(148, 226, 213, 0.25));
+  text-shadow: 0 0 8px rgba(166, 227, 161, 0.5);
+  padding-right: 15px;
+}
+
+
+#battery {
+  background: linear-gradient(135deg,
+      rgba(166, 227, 161, 0.3),
+      rgba(148, 226, 213, 0.25));
+  text-shadow: 0 0 8px rgba(166, 227, 161, 0.5);
+  padding-right: 14px;
+}
+
+
+#battery.charging {
+  background: linear-gradient(135deg,
+      rgba(137, 180, 250, 0.3),
+      rgba(180, 190, 254, 0.25));
+  text-shadow: 0 0 12px rgba(137, 180, 250, 0.7);
+  box-shadow:
+    0 0 15px rgba(137, 180, 250, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+
+#battery.full {
+  background: linear-gradient(135deg,
+      rgba(181, 232, 224, 0.3),
+      rgba(166, 227, 161, 0.25));
+  text-shadow: 0 0 8px rgba(181, 232, 224, 0.5);
+}
+
+/* Low battery */
+#battery.warning {
+  background: linear-gradient(135deg,
+      rgba(250, 179, 135, 0.3),
+      rgba(249, 226, 175, 0.25));
+  text-shadow: 0 0 10px rgba(250, 179, 135, 0.6);
+}
+
+
+#battery.critical {
+  background: linear-gradient(135deg,
+      rgba(243, 139, 168, 0.4),
+      rgba(230, 69, 83, 0.35));
+  color: #ffffff;
+  text-shadow: 0 0 15px rgba(243, 139, 168, 0.9);
+}
+
+
+#custom-archicon:hover,
+#clock:hover,
+#cpu:hover,
+#memory:hover,
+#disk:hover,
+#temperature:hover,
+#idle_inhibitor:hover,
+#pulseaudio:hover,
+#pulseaudio_slider:hover,
+#network:hover,
+#language:hover,
+#battery:hover {
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.4),
+    0 0 15px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  transition: box-shadow 0.3s ease;
+}
+
+
+#clock,
+#memory,
+#disk,
+#temperature,
+#idle_inhibitor,
+#pulseaudio,
+#pulseaudio_slider,
+#network,
+#language {
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
